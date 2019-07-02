@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "locahost:5000",
+    "secure": false
+  }
+}

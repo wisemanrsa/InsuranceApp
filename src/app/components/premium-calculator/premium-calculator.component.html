@@ -1,0 +1,72 @@
+<form #form="ngForm">
+  <div class="container">
+    <header class="heading"> Calculate Premium</header>
+    <div class="row ">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-xs-4">
+            <label class="input">Member Name :</label> </div>
+          <div class="col-xs-8">
+            <input type="text" name="fname" class="form-control " #memberName>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 mt-2">
+        <div class="row">
+          <div class="col-xs-4">
+            <label class="input">Member Type :</label></div>
+          <div class="col-xs-8">
+            <select class="form-control">
+              <option value=""></option>
+              <option>Member</option>
+              <option>Not a member</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-xs-4">
+            <label class="input">Member Id :</label></div>
+          <div class="col-xs-8">
+            <input type="text" name="mid" class="form-control last">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-xs-4">
+            <label class="input">Premium Payer Id :</label></div>
+          <div class="col-xs-8">
+            <input type="text" name="pid" class="form-control last">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-xs-4">
+            <label class="input">Insured Value :</label></div>
+          <div class="col-xs-8">
+            <select class="form-control">
+              <option value=""></option>
+              <option>Member</option>
+              <option>Not a member</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12" style="padding: 6px; margin: 6px;">
+        <div class="col-sm-12">
+          <div class="btn btn-warning">Calculate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
