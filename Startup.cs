@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using insuranceApp.Models;
+using InsuranceApp.Interfaces;
+using InsuranceApp.Repos;
+using InsuranceApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace insuranceApp
 {
@@ -30,6 +26,8 @@ namespace insuranceApp
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<InsuranceDbContext>(options => options.UseSqlServer(Configuration["ConnectionString:Default"]));
+            services.AddScoped<IPremiumsService, PremiumsService>();
+            services.AddScoped<IPremiumsRepo, PremiumsRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

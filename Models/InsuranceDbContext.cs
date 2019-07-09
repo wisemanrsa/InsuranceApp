@@ -9,7 +9,7 @@ namespace insuranceApp.Models
 
         }
 
-        DbSet<OwnPremium> OwnPremiums { get; set; }
-        DbSet<OtherPremium> OtherPremiums { get; set; }
+        public DbSet<OwnPremium> OwnPremiums { get; set; }
+        public DbSet<OtherPremium> OtherPremiums { get; set; }
     }
 }
