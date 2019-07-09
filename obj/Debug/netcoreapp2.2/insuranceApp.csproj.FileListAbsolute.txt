@@ -12,3 +12,17 @@ C:\dev\2019\insurance\insuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.Assembly
 C:\dev\2019\insurance\insuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.RazorTargetAssemblyInfo.cache
 C:\dev\2019\insurance\insuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.dll
 C:\dev\2019\insurance\insuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.pdb
+C:\DEV\Other\InsuranceApp\bin\Debug\netcoreapp2.2\insuranceApp.deps.json
+C:\DEV\Other\InsuranceApp\bin\Debug\netcoreapp2.2\insuranceApp.runtimeconfig.json
+C:\DEV\Other\InsuranceApp\bin\Debug\netcoreapp2.2\insuranceApp.runtimeconfig.dev.json
+C:\DEV\Other\InsuranceApp\bin\Debug\netcoreapp2.2\insuranceApp.dll
+C:\DEV\Other\InsuranceApp\bin\Debug\netcoreapp2.2\insuranceApp.pdb
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.csprojAssemblyReference.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.csproj.CoreCompileInputs.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.RazorAssemblyInfo.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.RazorAssemblyInfo.cs
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.AssemblyInfoInputs.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.AssemblyInfo.cs
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.RazorTargetAssemblyInfo.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.dll
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp2.2\insuranceApp.pdb

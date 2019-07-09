@@ -1,0 +1,7 @@
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\insuranceApp.csprojAssemblyReference.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\staticwebassets\insuranceApp.StaticWebAssets.Manifest.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\staticwebassets\insuranceApp.StaticWebAssets.xml
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\insuranceApp.csproj.CoreCompileInputs.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\insuranceApp.MvcApplicationPartsAssemblyInfo.cs
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\insuranceApp.AssemblyInfoInputs.cache
+C:\DEV\Other\InsuranceApp\obj\Debug\netcoreapp3.0\insuranceApp.AssemblyInfo.cs
