@@ -7,5 +7,7 @@ namespace InsuranceApp.Interfaces
     {
          List<OwnPremium> GetMembersPremium();
          List<OtherPremium> GetNonMembersPremium();
+         OtherPremium CalculateNonMembersPremium(int sumInsuredId);
+         OwnPremium CalculateMembersPremium(int sumInsuredId);
     }
 }

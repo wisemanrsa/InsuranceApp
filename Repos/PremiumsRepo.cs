@@ -22,5 +22,14 @@ namespace InsuranceApp.Repos
         {
             return context.OtherPremiums.ToList();
         }
+
+        public OwnPremium CalculateMembersPremium(int sumInsuredId)
+        {
+            return context.OwnPremiums.FirstOrDefault(pre => pre.Id == sumInsuredId);
+        }
+        public OtherPremium CalculateNonMembersPremium(int sumInsuredId)
+        {
+            return context.OtherPremiums.FirstOrDefault(pre => pre.Id == sumInsuredId);
+        }
     }
 }
