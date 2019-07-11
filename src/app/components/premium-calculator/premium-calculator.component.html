@@ -1,4 +1,4 @@
-<form #form="ngForm">
+<form #form="ngForm" (submit)="calculatePremiums(form.value)">
   <div class="container">
     <header class="heading"> Calculate Premium</header>
     <div class="row ">
@@ -7,32 +7,17 @@
           <div class="col-xs-4">
             <label class="input">Member Name :</label> </div>
           <div class="col-xs-8">
-            <input type="text" name="fname" class="form-control " #memberName>
+            <input type="text" name="mname" class="form-control " #memberName ngModel>
           </div>
         </div>
       </div>
-
-      <div class="col-sm-12 mt-2">
-        <div class="row">
-          <div class="col-xs-4">
-            <label class="input">Member Type :</label></div>
-          <div class="col-xs-8">
-            <select class="form-control">
-              <option value=""></option>
-              <option>Member</option>
-              <option>Not a member</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
 
       <div class="col-sm-12">
         <div class="row">
           <div class="col-xs-4">
             <label class="input">Member Id :</label></div>
           <div class="col-xs-8">
-            <input type="text" name="mid" class="form-control last">
+            <input type="number" name="mid" class="form-control last" #mid ngModel required>
           </div>
         </div>
       </div>
@@ -42,21 +27,19 @@
           <div class="col-xs-4">
             <label class="input">Premium Payer Id :</label></div>
           <div class="col-xs-8">
-            <input type="text" name="pid" class="form-control last">
+            <input type="number" name="pid" class="form-control last" ngModel #pid required >
           </div>
         </div>
       </div>
-
 
       <div class="col-sm-12">
         <div class="row">
           <div class="col-xs-4">
             <label class="input">Insured Value :</label></div>
-          <div class="col-xs-8">
-            <select class="form-control">
-              <option value=""></option>
-              <option>Member</option>
-              <option>Not a member</option>
+          <div class="col-xs-8" required>
+            <select class="form-control"  name="sumInsured" #sumIsured ngModel required>
+              <option value="">--Select Value--</option>
+              <option *ngFor="let insuredValue of insuredValues" value="{{insuredValue.id}}">{{insuredValue.value}}</option>
             </select>
           </div>
         </div>
@@ -64,7 +47,7 @@
 
       <div class="col-sm-12" style="padding: 6px; margin: 6px;">
         <div class="col-sm-12">
-          <div class="btn btn-warning">Calculate</div>
+          <button [disabled]="form.invalid" class="btn btn-warning" type="submit">Calculate</button>
         </div>
       </div>
     </div>

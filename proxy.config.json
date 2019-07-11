@@ -1,6 +1,7 @@
 {
   "/api": {
-    "target": "locahost:5000",
-    "secure": false
+    "target": "http://[::1]:5000",
+    "secure": false,
+    "changeOrigin": true
   }
 }
