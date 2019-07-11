@@ -1,2 +1,2 @@
-<app-premium-calculator></app-premium-calculator>
-<app-premium-details></app-premium-details>
+<app-premium-calculator (finalPremium)="handleFinalPremium($event)"></app-premium-calculator>
+<app-premium-details [finalPremium]="finalPremium"></app-premium-details>

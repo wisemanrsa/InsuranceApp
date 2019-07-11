@@ -11,6 +11,10 @@ export class PremiumsService {
   constructor(private http: HttpClient) { }
 
   getInsuredValues(): Observable<InsuredValueInterface[]> {
-    return this.http.get<InsuredValueInterface[]>('api/insuredValues');
+    return this.http.get<InsuredValueInterface[]>('api/insured-values');
+  }
+
+  calculatePremium(obj) {
+    return this.http.post('api/premium', obj);
   }
 }

@@ -1,4 +1,4 @@
-<form #form="ngForm" (submit)="calculatePremiums(form.value)">
+<form #form="ngForm" (ngSubmit)="calculatePremiums(form.value)" novalidate>
   <div class="container">
     <header class="heading"> Calculate Premium</header>
     <div class="row ">
@@ -37,7 +37,7 @@
           <div class="col-xs-4">
             <label class="input">Insured Value :</label></div>
           <div class="col-xs-8" required>
-            <select class="form-control"  name="sumInsured" #sumIsured ngModel required>
+            <select class="form-control"  name="sumInsured" #sumInsured ngModel required>
               <option value="">--Select Value--</option>
               <option *ngFor="let insuredValue of insuredValues" value="{{insuredValue.id}}">{{insuredValue.value}}</option>
             </select>

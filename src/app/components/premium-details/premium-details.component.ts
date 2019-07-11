@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PremiumInterface } from 'src/app/models/premim.interface';
 
 @Component({
   selector: 'app-premium-details',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PremiumDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  finalPremium: PremiumInterface = {};
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
