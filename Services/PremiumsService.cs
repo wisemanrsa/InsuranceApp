@@ -33,7 +33,8 @@ namespace InsuranceApp.Services
             var memberPremiums = premiumsRepo.CalculateMembersPremium(dto.SumIsuredId);
             var OtherPremiums = premiumsRepo.CalculateNonMembersPremium(dto.SumIsuredId);
             var premium = GetPremium(dto.IsMember ? (object)memberPremiums : OtherPremiums, dto.Age);
-            premiumsRepo.SavePremium(new PremiumsHistory{
+            premiumsRepo.SavePremium(new PremiumsHistory
+            {
                 Age = dto.Age,
                 PayerId = dto.PayerId,
                 Name = dto.PayerName,
@@ -56,6 +57,23 @@ namespace InsuranceApp.Services
                     return (int)f.GetValue(o);
             }
             return premium;
+        }
+
+        public List<PremiumHistoryDto> GetHistory(int? id)
+        {
+            var histories = new List<PremiumHistoryDto>();
+            premiumsRepo.GetHistory(id).ForEach(premium =>
+            {
+                histories.Add(new PremiumHistoryDto
+                {
+                    Id = premium.Id,
+                    Age = premium.Age,
+                    Name = premium.Name,
+                    SumInsured = premium.SumInsured,
+                    PayerId = premium.PayerId
+                });
+            });
+            return histories;
         }
     }
 }

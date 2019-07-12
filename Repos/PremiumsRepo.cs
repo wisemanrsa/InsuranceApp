@@ -33,9 +33,18 @@ namespace InsuranceApp.Repos
             return context.OtherPremiums.FirstOrDefault(pre => pre.Id == sumInsuredId);
         }
 
-        public void SavePremium(PremiumsHistory premium) {
+        public void SavePremium(PremiumsHistory premium)
+        {
             context.PremiumsHistories.Add(premium);
             context.SaveChanges();
+        }
+
+        public List<PremiumsHistory> GetHistory(int? payerId = null)
+        {
+            var premiums = context.PremiumsHistories.ToList();
+            if (payerId != null)
+                premiums = premiums.Where(p => p.PayerId == payerId).ToList();
+            return premiums;
         }
     }
 }

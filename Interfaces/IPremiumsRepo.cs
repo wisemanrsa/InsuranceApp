@@ -11,5 +11,6 @@ namespace InsuranceApp.Interfaces
          OtherPremium CalculateNonMembersPremium(int sumInsuredId);
          OwnPremium CalculateMembersPremium(int sumInsuredId);
          void SavePremium(PremiumsHistory premium);
+         List<PremiumsHistory> GetHistory(int? payerId = null);
     }
 }

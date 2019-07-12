@@ -7,5 +7,6 @@ namespace InsuranceApp.Interfaces
     {
          List<InsuredValuesDto> GetSumInsured();
          PremiumDto CalculateMembersPremium(PremiumCalcDto dto);
+         List<PremiumHistoryDto> GetHistory(int? id);
     }
 }
