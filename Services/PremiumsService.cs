@@ -4,6 +4,7 @@ using System.Linq;
 using insuranceApp.Models;
 using InsuranceApp.Dto;
 using InsuranceApp.Interfaces;
+using InsuranceApp.Models;
 
 namespace InsuranceApp.Services
 {
@@ -27,11 +28,17 @@ namespace InsuranceApp.Services
             return insuredValues;
         }
 
-        public PremiumDto CalculateMembersPremium(int age, bool isMember, int sumInsuredId)
+        public PremiumDto CalculateMembersPremium(PremiumCalcDto dto)
         {
-            var memberPremiums = premiumsRepo.CalculateMembersPremium(sumInsuredId);
-            var OtherPremiums = premiumsRepo.CalculateNonMembersPremium(sumInsuredId);
-            var premium = GetPremium(isMember ? (object)memberPremiums : OtherPremiums, age);
+            var memberPremiums = premiumsRepo.CalculateMembersPremium(dto.SumIsuredId);
+            var OtherPremiums = premiumsRepo.CalculateNonMembersPremium(dto.SumIsuredId);
+            var premium = GetPremium(dto.IsMember ? (object)memberPremiums : OtherPremiums, dto.Age);
+            premiumsRepo.SavePremium(new PremiumsHistory{
+                Age = dto.Age,
+                PayerId = dto.PayerId,
+                Name = dto.PayerName,
+                SumInsured = dto.SumIsuredId
+            });
 
             return new PremiumDto
             {

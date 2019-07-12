@@ -32,13 +32,16 @@ export class PremiumCalculatorComponent implements OnInit {
     const dateOfBirth = first6Digits.match(/.{1,2}/g).join('-');
     if (!moment(moment(dateOfBirth).format('YY-MM-DD')).isValid()) {
       this.errMessage = 'Cannot extract age from payer ID';
+      return;
     }
     console.log(dateOfBirth);
     const age = new Date().getFullYear() - new Date(moment(dateOfBirth).format('YY-MM-DD')).getFullYear();
     const obj = {
       age,
       sumIsuredId: formValues.sumInsured,
-      isMember: formValues.mid.toString().length > 0
+      isMember: formValues.mid.toString().length > 0,
+      payerId: formValues.pid,
+      payerName: formValues.fname
     };
     this.premiumsService.calculatePremium(obj).subscribe((res: PremiumInterface) => {
       this.finalPremium.emit(res);
@@ -50,5 +53,4 @@ export class PremiumCalculatorComponent implements OnInit {
     console.log(field);
     this.insuredValues = this.allInsuredValues.filter(i => i.isMember === field.length > 0);
   }
-
 }

@@ -6,6 +6,6 @@ namespace InsuranceApp.Interfaces
     public interface IPremiumsService
     {
          List<InsuredValuesDto> GetSumInsured();
-         PremiumDto CalculateMembersPremium(int age, bool isMember, int sumInsuredId);
+         PremiumDto CalculateMembersPremium(PremiumCalcDto dto);
     }
 }

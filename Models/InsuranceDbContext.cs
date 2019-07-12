@@ -1,3 +1,4 @@
+using InsuranceApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace insuranceApp.Models
@@ -11,5 +12,6 @@ namespace insuranceApp.Models
 
         public DbSet<OwnPremium> OwnPremiums { get; set; }
         public DbSet<OtherPremium> OtherPremiums { get; set; }
+        public DbSet<PremiumsHistory> PremiumsHistories { get; set; }
     }
 }

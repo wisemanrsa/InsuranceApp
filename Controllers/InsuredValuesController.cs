@@ -24,7 +24,7 @@ namespace InsuranceApp.Controllers
         public IActionResult CalculatePremium([FromBody] PremiumCalcDto dto)
         {
             if (dto.Age < 18 || dto.Age > 65) return BadRequest("Only 18 to 65 years old can take up a policy");
-            return Ok(premiumsService.CalculateMembersPremium(dto.Age, dto.IsMember, dto.SumIsuredId));
+            return Ok(premiumsService.CalculateMembersPremium(dto));
         }
     }
 }

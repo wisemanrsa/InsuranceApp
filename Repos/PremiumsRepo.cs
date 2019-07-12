@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using insuranceApp.Models;
 using InsuranceApp.Interfaces;
+using InsuranceApp.Models;
 
 namespace InsuranceApp.Repos
 {
@@ -30,6 +31,11 @@ namespace InsuranceApp.Repos
         public OtherPremium CalculateNonMembersPremium(int sumInsuredId)
         {
             return context.OtherPremiums.FirstOrDefault(pre => pre.Id == sumInsuredId);
+        }
+
+        public void SavePremium(PremiumsHistory premium) {
+            context.PremiumsHistories.Add(premium);
+            context.SaveChanges();
         }
     }
 }

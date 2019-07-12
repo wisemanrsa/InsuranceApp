@@ -4,11 +4,10 @@ namespace InsuranceApp.Dto
 {
     public class PremiumCalcDto
     {
-        [Required]
         public int Age { get; set; }
-        [Required]
         public bool IsMember { get; set; }
-        [Required]
         public int SumIsuredId { get; set; }
+        public int PayerId { get; set; }
+        public string PayerName { get; set; }
     }
 }
