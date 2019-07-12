@@ -38,7 +38,8 @@ namespace InsuranceApp.Services
                 Age = dto.Age,
                 PayerId = dto.PayerId,
                 Name = dto.PayerName,
-                SumInsured = dto.SumIsuredId
+                SumInsured = dto.SumIsuredId,
+                ActionDate = DateTime.Now
             });
 
             return new PremiumDto
@@ -70,7 +71,8 @@ namespace InsuranceApp.Services
                     Age = premium.Age,
                     Name = premium.Name,
                     SumInsured = premium.SumInsured,
-                    PayerId = premium.PayerId
+                    PayerId = premium.PayerId,
+                    ActionDate = premium.ActionDate
                 });
             });
             return histories;

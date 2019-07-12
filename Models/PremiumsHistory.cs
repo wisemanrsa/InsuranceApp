@@ -1,3 +1,4 @@
+using System;
 namespace InsuranceApp.Models
 {
     public class PremiumsHistory
@@ -7,5 +8,6 @@ namespace InsuranceApp.Models
         public int PayerId { get; set; }
         public string Name { get; set; }
         public int SumInsured { get; set; }
+        public DateTime ActionDate { get; set; } 
     }
 }

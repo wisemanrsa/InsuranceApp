@@ -1,3 +1,5 @@
+using System;
+
 namespace InsuranceApp.Dto
 {
     public class PremiumHistoryDto
@@ -7,5 +9,6 @@ namespace InsuranceApp.Dto
         public int PayerId { get; set; }
         public string Name { get; set; }
         public int SumInsured { get; set; }
+        public DateTime ActionDate { get; set; }
     }
 }
