@@ -1,2 +1,3 @@
-<app-premium-calculator (finalPremium)="handleFinalPremium($event)"></app-premium-calculator>
+<app-premium-calculator (finalPremium)="handleFinalPremium($event)" (oldPremiums)="handleOldPremiums($event)"></app-premium-calculator>
 <app-premium-details [finalPremium]="finalPremium"></app-premium-details>
+<app-history [oldPremiums]="oldPremiums"></app-history>

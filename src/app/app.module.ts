@@ -8,13 +8,15 @@ import { PremiumCalculatorComponent } from './components/premium-calculator/prem
 import { PremiumDetailsComponent } from './components/premium-details/premium-details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HistoryComponent } from './components/history/history.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PremiumManagerComponent,
     PremiumCalculatorComponent,
-    PremiumDetailsComponent
+    PremiumDetailsComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

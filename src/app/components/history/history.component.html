@@ -1,0 +1,24 @@
+<div class="table-responsive" id="sailorTableArea" *ngIf="oldPremiums.length > 0">
+  <table id="sailorTable" class="table table-striped table-bordered" width="100%">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Payer Id</th>
+        <th>Request Date</th>
+        <th>Sum Insured</th>
+        <th>Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let premium of oldPremiums">
+        <td>{{premium.name}}</td>
+        <td>{{premium.age}}</td>
+        <td>{{premium.payerId}}</td>
+        <td>{{premium.actionDate}}</td>
+        <td>{{premium.sumInsured}}</td>
+        <td>{{premium.premium}}</td>
+      </tr>
+    </tbody>
+  </table>

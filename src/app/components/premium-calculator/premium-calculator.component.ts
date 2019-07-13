@@ -3,6 +3,7 @@ import { PremiumsService } from 'src/app/services/premiums.service';
 import { InsuredValueInterface } from 'src/app/models/insured-values.interface';
 import { PremiumInterface } from 'src/app/models/premim.interface';
 import * as moment from 'moment';
+import { OldPremium } from 'src/app/models/old-premium';
 
 @Component({
   selector: 'app-premium-calculator',
@@ -18,6 +19,9 @@ export class PremiumCalculatorComponent implements OnInit {
 
   @Output()
   finalPremium: EventEmitter<PremiumInterface> = new EventEmitter<PremiumInterface>();
+
+  @Output()
+  oldPremiums: EventEmitter<OldPremium[]> = new EventEmitter<OldPremium[]>();
 
   ngOnInit() {
     this.premiumsService.getInsuredValues().subscribe((values: InsuredValueInterface[]) => {
@@ -52,5 +56,9 @@ export class PremiumCalculatorComponent implements OnInit {
   filterSumValues(field) {
     console.log(field);
     this.insuredValues = this.allInsuredValues.filter(i => i.isMember === field.length > 0);
+  }
+
+  getHistory() {
+    this.premiumsService.getHistory().subscribe((values: OldPremium[]) => this.oldPremiums.emit(values));
   }
 }
