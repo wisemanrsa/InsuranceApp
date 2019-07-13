@@ -45,7 +45,7 @@ export class PremiumCalculatorComponent implements OnInit {
       sumIsuredId: formValues.sumInsured,
       isMember: formValues.mid.toString().length > 0,
       payerId: formValues.pid,
-      payerName: formValues.fname
+      payerName: formValues.memberName
     };
     this.premiumsService.calculatePremium(obj).subscribe((res: PremiumInterface) => {
       this.finalPremium.emit(res);

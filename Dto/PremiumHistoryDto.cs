@@ -10,5 +10,6 @@ namespace InsuranceApp.Dto
         public string Name { get; set; }
         public int SumInsured { get; set; }
         public DateTime ActionDate { get; set; }
+        public int Premium { get; set; }
     }
 }

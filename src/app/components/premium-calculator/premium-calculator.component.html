@@ -7,7 +7,7 @@
           <div class="col-xs-4">
             <label class="input">Member Name :</label> </div>
           <div class="col-xs-8">
-            <input type="text" name="mname" class="form-control " #memberName ngModel>
+            <input type="text" name="memberName" class="form-control " #memberName='' ngModel required>
           </div>
         </div>
       </div>
@@ -17,7 +17,7 @@
           <div class="col-xs-4">
             <label class="input">Member Id :</label></div>
           <div class="col-xs-8">
-            <input (ngModelChange)="filterSumValues(mid.value)" type="number" name="mid" class="form-control last" #mid ngModel required >
+            <input (ngModelChange)="filterSumValues(mid.value)" type="number" name="mid" class="form-control last" #mid ngModel >
           </div>
         </div>
       </div>
